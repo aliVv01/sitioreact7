@@ -4,9 +4,9 @@ import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyDT4tvzrJ8lcccHiDgUaqWpx7fSG23A-hU',
-    authDomain: 'fb-sitioreact4-3a320.firebaseapp.com',
-    projectId: 'fb-sitioreact4-3a320',
-    storageBucket: "fb-sitioreact4-3a320.appspot.com",
+    authDomain: 'fb-sitioreact4.firebaseapp.com',
+    projectId: 'fb-sitioreact4',
+    storageBucket: "fb-sitioreact4.appspot.com",
 };
 
 const app = initializeApp(firebaseConfig);
