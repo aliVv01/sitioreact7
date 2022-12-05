@@ -81,7 +81,7 @@ function App() {
               <div className="card mb-1" key={p.id}>
                 <div className="card-body">
                   <div className="d-flex justify-content-between">
-                    <h4>N.{i} - {p.url} </h4>
+                    <h4>N.{i} - {p.nombre} </h4>
                     <div>
                       <i className="material-icons text-danger"
                         onClick={() => fnDelete(p.id)}>close</i>
@@ -91,8 +91,8 @@ function App() {
                     </div>
                   </div>
                   <div className="d-flex justify-content">
-                    <span>Nombre: {p.nombre} </span>...  
-                    <a href="#"> Descripción: {p.descripcion}</a>
+                    <span>Edad: {p.edad} </span>...  
+                    <a href="#"> Género: {p.genero}</a>
                   </div>
                 </div>
               </div>

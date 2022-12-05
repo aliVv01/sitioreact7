@@ -10,7 +10,7 @@ const AppForm = (props) => {
     ///////////////////////////////////////////////////////////////
     ////////////////////CREAR - fnCrear - Guardar//////////////////
     ///////////////////////////////////////////////////////////////
-    const camposRegistro = {url:"", nombre:"", descripcion:"",};   //estructura tbL
+    const camposRegistro = {nombre:"", edad:"", genero:"",};   //estructura tbL
     const [objeto, setObjeto] = useState(camposRegistro);     //Tabla u objeto
 
     const handleStatusChange = (e) => {                        //Manejo cambios en input...
@@ -52,8 +52,8 @@ const AppForm = (props) => {
     }
     /////////////////////////////VALIDACIÓN////////////////////////
     const validarForm = () => {
-        if(objeto.url===""|| /^\s+$/.test(objeto.url)){
-            alert("Escriba url...");
+        if(objeto.nombre===""|| /^\s+$/.test(objeto.nombre)){
+            alert("Escriba su nombre...");
             return false;                                     //Si no tiene texto
         }
         return true;                                          //Si tiene texto
@@ -94,25 +94,27 @@ const AppForm = (props) => {
                     <i className="material-icons">insert_link</i>
                     
                 </div>
-                <input type="text" className="form-control" name="url" placeholder="URL..."
-                    onChange={handleStatusChange} value={objeto.url} />
+                <input type="text" className="form-control" name="nombre" placeholder="Nombre..."
+                    onChange={handleStatusChange} value={objeto.nombre} />
             </div>
+
             <div className="form-group input-group clearfix">
                 <div className="input-group-text bd-light ">
                     <i className="material-icons">group_add</i>
                     
                 </div>
-                <input type="text" className="form-control float-start" name="nombre" placeholder="Nombre..."
-                    onChange={handleStatusChange} value={objeto.nombre} />
+                <input type="int" className="form-control float-start" name="edad" placeholder="Edad..."
+                    onChange={handleStatusChange} value={objeto.edad} />
             </div>
             <div className="form-group input-group">
                 <div className="input-group-text bd-light">
                     <i className="material-icons">star_half</i>
                     
                 </div>
-                <input type="text" className="form-control" name="descripcion" placeholder="Descripción..."
-                    onChange={handleStatusChange} value={objeto.descripcion} />
+                <input type="text" className="form-control" name="genero" placeholder="Género..."
+                    onChange={handleStatusChange} value={objeto.genero} />
             </div>
+
             <button className="btn btn-primary btn-block"> 
                 {props.idActual === ""? "Guardar" : "Actualizar"} 
             </button>
